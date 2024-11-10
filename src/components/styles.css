@@ -44,7 +44,7 @@
 .new-case-btn {
   width: 100%;
   padding: 14px 20px;
-  background-color: #ff5722; /* Bold red */
+  background-color: #e80000; /* Bold red */
   color: white;
   border: none;
   cursor: pointer;
@@ -58,7 +58,7 @@
 }
 
 .new-case-btn:hover {
-  background-color: #e64a19;
+  background-color: #c62828;
   transform: translateY(-2px);
 }
 
