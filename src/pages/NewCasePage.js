@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom' // Import useNavigate hook
 import mapboxgl from 'mapbox-gl'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import './NewCaseForm.css'
+import '../env'
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiYW5kcmVpNHJvIiwiYSI6ImNtMzFvOXhsajB6MWMya3M4Z21pNWloenUifQ.fC9Bg3TNkDl0e-ZPpr3pZQ'
+mapboxgl.accessToken = MAPBOX_TOKEN
 
 const NewCaseForm = () => {
   const [address, setAddress] = useState('')
