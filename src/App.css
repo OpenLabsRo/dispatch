@@ -1,0 +1,137 @@
+/* General styling for the App */
+
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.App-link {
+  color: #ff5722;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #e64a19;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Map page layout */
+.map-page {
+  display: flex;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Map container */
+.map-container {
+  flex: 1;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 350px;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar:hover {
+  transform: translateX(10px);
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* New case button styling */
+.new-case-btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.new-case-btn:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.new-case-btn:active {
+  background-color: #d84315;
+  transform: translateY(1px);
+}
+
+/* Add a little spacing around elements */
+.sidebar > * {
+  margin-bottom: 20px;
+}
+
+/* Add smooth scrolling for the sidebar content */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #ff5722 #f4f4f9;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ff5722;
+  border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f4f4f9;
+}

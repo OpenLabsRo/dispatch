@@ -1,0 +1,191 @@
+/* Sidebar container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row; /* Keep this for the default left-right layout */
+}
+
+.map-container {
+  flex: 1;
+  height: 100%;
+}
+
+.sidebar {
+  width: 320px;
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+/* Remove hover animation from sidebar */
+.sidebar:hover {
+  transform: none;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling inside sidebar */
+.sidebar h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #f4f4f9;
+  padding-bottom: 10px;
+}
+
+/* Sidebar button for new case */
+.new-case-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #ff5722; /* Bold red */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+  margin-top: 30px;
+}
+
+.new-case-btn:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.new-case-btn:active {
+  background-color: #d84315;
+  transform: translateY(1px);
+}
+
+/* Marker styling */
+.marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  background-size: cover;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* On hover, make the marker pop out */
+.marker:hover {
+  transform: scale(1.1);
+}
+
+/* Form container within sidebar */
+.form-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide initially */
+  opacity: 0; /* Invisible initially */
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateY(-20px); /* Slightly shifted up */
+}
+
+/* Form container visible on new case button click */
+.form-container.show {
+  display: block;
+  opacity: 1; /* Visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+/* Adjust spacing between form elements */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #ff5722; /* Red accent when focused */
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 87, 34, 0.2);
+}
+
+/* Sidebar scrollbar styling */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #ff5722 #f4f4f9;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ff5722;
+  border-radius: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f4f4f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .new-case-btn {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+}
+/* Styling for the ambulance status indicator */
+.ambulance-item {
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ambulance-item:hover {
+  background-color: #e8e8e8;
+  transform: translateX(4px);
+}
+
+.ambulance-status {
+  width: 8px;
+  height: 100%;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+/* Green line for available ambulances */
+.ambulance-item.available .ambulance-status {
+  background-color: #4caf50; /* Green */
+}
+
+/* Red line for busy ambulances */
+.ambulance-item.busy .ambulance-status {
+  background-color: #f44336; /* Red */
+}

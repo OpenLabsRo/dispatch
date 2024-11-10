@@ -1,0 +1,242 @@
+/* Container styling for the form page */
+.mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--icon {
+  display: none !important;
+}
+
+/* Adjust the input padding to make space without the icon */
+.mapboxgl-ctrl-geocoder input {
+  padding-left: 20px !important;  /* Adjust this value as needed */
+}
+
+.new-case-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title styling */
+h2 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+/* Form layout */
+.new-case-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Input styling */
+input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Label styling */
+label {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  padding: 14px 28px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  background-color: #003f7f;
+  transform: translateY(1px);
+}
+
+/* Pop-up Styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 600px;
+  max-height: 600px;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: popupFadeIn 0.5s forwards;
+}
+
+@keyframes popupFadeIn {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Ambulance List Styling */
+.ambulance-list {
+  margin-top: 30px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.ambulance-item {
+  padding: 14px;
+  margin-bottom: 14px;
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ambulance-item:hover {
+  background-color: #e8e8e8;
+  transform: translateX(4px);
+}
+
+.ambulance-item.available {
+  border-left: 8px solid #4caf50;
+}
+
+.ambulance-item.busy {
+  border-left: 8px solid #f44336;
+}
+
+/* Popup Map Styling */
+.popup-map {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button Styling */
+.back-btn {
+  padding: 12px 24px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  margin-top: 40px;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.back-btn:active {
+  background-color: #d84315;
+  transform: translateY(1px);
+}
+
+/* Add some space between elements at the bottom */
+.new-case-form > *:last-child {
+  margin-bottom: 40px;
+}
